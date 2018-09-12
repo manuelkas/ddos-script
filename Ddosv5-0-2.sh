@@ -148,7 +148,7 @@ function installvirtualbox {
 	if [[ $install = Y || $install = y ]] ; then
 		echo -e "\e[31m[+] Installing Virtualbox now!\e[0m"
 		apt-get install -y virtualbox-guest-x11 virtualbox virtualbox-ext-pack linux-headers*
-		usermod -a -G vboxusers ddos
+		usermod -a -G vboxusers $USER
 		echo -e "\e[32m[-] Done Installing Virtualbox!\e[0m"		
 	else
 		echo -e "\e[32m[-] Ok,maybe later !\e[0m"
