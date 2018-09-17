@@ -12,7 +12,7 @@ echo -e "
 \033[31m#######################################################\033[m
                 Let's Update Kali
 \033[31m#######################################################\033[m"
-select menusel in "Update sources.list (Included kali sana repository for installing more package)" "Update Kali Sana 2.0 to Kali 2016.2" "Update and Clean Kali" "Back to Main"; do
+select menusel in "Update sources.list (Included kali sana repository for installing more package)" "Update and Clean Kali" "Back to Main"; do
 case $menusel in
         "Update sources.list (Included kali sana repository for installing more package)")
                 
@@ -25,19 +25,7 @@ case $menusel in
 		apt-get update
 		pause
 		clear ;;	
-	"Update Kali Sana 2.0 to Kali 2016.2")
-		clear
-		echo -e "\033[32mUpdating Kali Sana to Kali Linux 2016.2\033[m"
-		rm /etc/apt/sources.list
-		echo "" >> /etc/apt/sources.list
-		echo 'deb http://http.kali.org/kali kali-rolling main non-free contrib' >> /etc/apt/sources.list
-		echo 'deb-src http://http.kali.org/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list
-		#apt-get update && apt-get -y dist-upgrade
-		apt-get update && apt-get -y upgrade 
-		echo -e "\033[32mDone updating kali. You need to reboot your Kali Linux system\033[m"
-		pause
-		clear ;;
-	
+		
 	"Update and Clean Kali")
 		clear
 		echo -e "\033[32mUpdating and Cleaning Kali\033[m"
